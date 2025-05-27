@@ -366,6 +366,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = SNWX66X52Q;
 				ENABLE_BITCODE = NO;
+				FLUTTER_BUILD_NUMBER = 2;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,6 +510,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = SNWX66X52Q;
 				ENABLE_BITCODE = NO;
+				FLUTTER_BUILD_NUMBER = 2;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -542,6 +544,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = SNWX66X52Q;
 				ENABLE_BITCODE = NO;
+				FLUTTER_BUILD_NUMBER = 2;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
