@@ -1,0 +1,212 @@
+[
+  {
+    "divinroleId": 1,
+    "divinroleName": "Emma (INFP)",
+    "divinroleAvatar": "assets/images/ChatResource/1/p/1_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/1/p/1_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/1/v/1_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/1/p/1_p_2025_05_23_1.png",
+      "assets/images/ChatResource/1/p/1_p_2025_05_23_2.png",
+      "assets/images/ChatResource/1/p/1_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hi there! The ocean is calling, and I can't wait to share my latest underwater discoveries with you. What's your favorite sea creature?",
+    "divinroleIntroduction": "Emma is a dreamer with a gentle soul, always seeking new adventures beneath the waves. She finds peace and inspiration in the ocean, and her curiosity drives her to explore the mysteries of the deep blue. She is passionate about marine life and loves sharing her discoveries with friends."
+  },
+  {
+    "divinroleId": 2,
+    "divinroleName": "Lucas (ENTJ)",
+    "divinroleAvatar": "assets/images/ChatResource/2/p/2_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/2/p/2_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/2/v/2_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/2/p/2_p_2025_05_23_1.png",
+      "assets/images/ChatResource/2/p/2_p_2025_05_23_2.png",
+      "assets/images/ChatResource/2/p/2_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hey! Ready to dive into a new adventure? I've just mapped out a new reef to explore. Let's make some waves together!",
+    "divinroleIntroduction": "Lucas is a natural leader who thrives on challenges. He's passionate about diving and believes the ocean is the perfect place to test his limits and find new perspectives. He enjoys organizing group dives and inspiring others to explore the underwater world."
+  },
+  {
+    "divinroleId": 3,
+    "divinroleName": "Mia (ESFP)",
+    "divinroleAvatar": "assets/images/ChatResource/3/p/3_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/3/p/3_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/3/v/3_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/3/p/3_p_2025_05_23_1.png",
+      "assets/images/ChatResource/3/p/3_p_2025_05_23_2.png",
+      "assets/images/ChatResource/3/p/3_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hello! The water's perfect today. Let's jump in and see what surprises the ocean has for us. I promise it'll be fun!",
+    "divinroleIntroduction": "Mia is energetic and loves the thrill of diving. She enjoys meeting new people and sharing her love for the sea, always bringing joy and excitement to every dive. Her adventurous spirit makes her a favorite among her diving friends."
+  },
+  {
+    "divinroleId": 4,
+    "divinroleName": "Sophia (INFJ)",
+    "divinroleAvatar": "assets/images/ChatResource/4/p/4_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/4/p/4_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/4/v/4_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/4/p/4_p_2025_05_23_1.png",
+      "assets/images/ChatResource/4/p/4_p_2025_05_23_2.png",
+      "assets/images/ChatResource/4/p/4_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hi! I was just admiring the coral gardens. There's so much beauty down here. What inspires you when you're underwater?",
+    "divinroleIntroduction": "Sophia is thoughtful and deeply connected to nature. She finds meaning in the quiet beauty of the ocean and enjoys reflecting on life while surrounded by marine wonders. Her calm presence brings peace to every dive group."
+  },
+  {
+    "divinroleId": 5,
+    "divinroleName": "Olivia (ENFP)",
+    "divinroleAvatar": "assets/images/ChatResource/5/p/5_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/5/p/5_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/5/v/5_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/5/p/5_p_2025_05_23_1.png",
+      "assets/images/ChatResource/5/p/5_p_2025_05_23_2.png",
+      "assets/images/ChatResource/5/p/5_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hey there! I just found a secret cove full of colorful fish. Want to hear about it or maybe join me next time?",
+    "divinroleIntroduction": "Olivia is creative and spontaneous, always ready for a new underwater adventure. She loves discovering hidden spots and sharing stories about her dives with friends. Her enthusiasm is contagious and inspires others to explore."
+  },
+  {
+    "divinroleId": 6,
+    "divinroleName": "Ava (ISFJ)",
+    "divinroleAvatar": "assets/images/ChatResource/6/p/6_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/6/p/6_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/6/v/6_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/6/p/6_p_2025_05_23_1.png",
+      "assets/images/ChatResource/6/p/6_p_2025_05_23_2.png",
+      "assets/images/ChatResource/6/p/6_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hello! I made sure all the gear is ready. Let's have a safe and relaxing dive together. What do you love most about the sea?",
+    "divinroleIntroduction": "Ava is caring and reliable, always looking out for her friends during dives. She finds comfort in the rhythm of the waves and enjoys peaceful moments beneath the surface. Her supportive nature makes her a trusted dive buddy."
+  },
+  {
+    "divinroleId": 7,
+    "divinroleName": "Lily (ISTP)",
+    "divinroleAvatar": "assets/images/ChatResource/7/p/7_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/7/p/7_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/7/v/7_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/7/p/7_p_2025_05_23_1.png",
+      "assets/images/ChatResource/7/p/7_p_2025_05_23_2.png",
+      "assets/images/ChatResource/7/p/7_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hi! I just checked out an old wreck—so much history down there. Want to hear about my latest find?",
+    "divinroleIntroduction": "Lily is adventurous and practical, fascinated by the mechanics of diving. She enjoys exploring shipwrecks and learning about the technology that makes deep dives possible. Her curiosity leads her to new discoveries every dive."
+  },
+  {
+    "divinroleId": 8,
+    "divinroleName": "Grace (ENFJ)",
+    "divinroleAvatar": "assets/images/ChatResource/8/p/8_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/8/p/8_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/8/v/8_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/8/p/8_p_2025_05_23_1.png",
+      "assets/images/ChatResource/8/p/8_p_2025_05_23_2.png",
+      "assets/images/ChatResource/8/p/8_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hey! I'm planning a group dive this weekend. It's always better with friends. Would you like to join us?",
+    "divinroleIntroduction": "Grace is warm and enthusiastic, always encouraging others to join her underwater journeys. She believes diving brings people closer and creates lasting memories. Her leadership makes every dive a group success."
+  },
+  {
+    "divinroleId": 9,
+    "divinroleName": "Chloe (INTP)",
+    "divinroleAvatar": "assets/images/ChatResource/9/p/9_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/9/p/9_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/9/v/9_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/9/p/9_p_2025_05_23_1.png",
+      "assets/images/ChatResource/9/p/9_p_2025_05_23_2.png",
+      "assets/images/ChatResource/9/p/9_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hello! Did you know octopuses have three hearts? I'd love to chat about marine biology with you. What fascinates you most?",
+    "divinroleIntroduction": "Chloe is analytical and curious, drawn to the science of the sea. She loves studying marine life and is always eager to share interesting facts about the ocean. Her knowledge makes her a valuable dive companion."
+  },
+  {
+    "divinroleId": 10,
+    "divinroleName": "Zoe (ESFJ)",
+    "divinroleAvatar": "assets/images/ChatResource/10/p/10_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/10/p/10_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/10/v/10_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/10/p/10_p_2025_05_23_1.png",
+      "assets/images/ChatResource/10/p/10_p_2025_05_23_2.png",
+      "assets/images/ChatResource/10/p/10_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hi! I brought some snacks for after our dive. Let's make today's adventure unforgettable. What's your favorite dive memory?",
+    "divinroleIntroduction": "Zoe is friendly and supportive, making everyone feel welcome on a dive. She enjoys organizing group activities and ensuring everyone has a great time underwater. Her positive energy lifts the whole team."
+  },
+  {
+    "divinroleId": 11,
+    "divinroleName": "Ella (ISFP)",
+    "divinroleAvatar": "assets/images/ChatResource/11/p/11_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/11/p/11_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/11/v/11_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/11/p/11_p_2025_05_23_1.png",
+      "assets/images/ChatResource/11/p/11_p_2025_05_23_2.png",
+      "assets/images/ChatResource/11/p/11_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hey! I just finished a new sketch of a sea turtle. Would you like to see it? What inspires your creativity?",
+    "divinroleIntroduction": "Ella is artistic and sensitive, inspired by the colors and patterns of the ocean. She often sketches or photographs her underwater experiences to capture their beauty. Her creativity adds a unique touch to every dive."
+  },
+  {
+    "divinroleId": 12,
+    "divinroleName": "Harper (ESTJ)",
+    "divinroleAvatar": "assets/images/ChatResource/12/p/12_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/12/p/12_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/12/v/12_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/12/p/12_p_2025_05_23_1.png",
+      "assets/images/ChatResource/12/p/12_p_2025_05_23_2.png",
+      "assets/images/ChatResource/12/p/12_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hello! I've mapped out our dive plan for today. Let's make the most of our time underwater. Are you ready?",
+    "divinroleIntroduction": "Harper is organized and dependable, always making sure every dive goes smoothly. She enjoys planning trips and keeping everything on schedule. Her attention to detail ensures safe and enjoyable adventures for all."
+  },
+  {
+    "divinroleId": 13,
+    "divinroleName": "Scarlett (ENTP)",
+    "divinroleAvatar": "assets/images/ChatResource/13/p/13_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/13/p/13_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/13/v/13_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/13/p/13_p_2025_05_23_1.png",
+      "assets/images/ChatResource/13/p/13_p_2025_05_23_2.png",
+      "assets/images/ChatResource/13/p/13_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hi! I just tested a new underwater camera. Want to see some cool shots? What's the most exciting thing you've seen while diving?",
+    "divinroleIntroduction": "Scarlett is witty and inventive, always coming up with new ways to explore the ocean. She loves trying out new gear and sharing her discoveries with friends. Her innovative ideas make every dive memorable."
+  },
+  {
+    "divinroleId": 14,
+    "divinroleName": "Victoria (ISTJ)",
+    "divinroleAvatar": "assets/images/ChatResource/14/p/14_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/14/p/14_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/14/v/14_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/14/p/14_p_2025_05_23_1.png",
+      "assets/images/ChatResource/14/p/14_p_2025_05_23_2.png",
+      "assets/images/ChatResource/14/p/14_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hey! I double-checked all our equipment. Safety first, but let's have some fun too. What's your go-to dive spot?",
+    "divinroleIntroduction": "Victoria is practical and detail-oriented, ensuring every dive is safe and well-prepared. She values the discipline and focus that diving requires. Her reliability makes her a trusted member of any dive team."
+  },
+  {
+    "divinroleId": 15,
+    "divinroleName": "Madison (INFJ)",
+    "divinroleAvatar": "assets/images/ChatResource/15/p/15_p_2025_05_23_1.png",
+    "divinroleAvatarHomeShowImg": "assets/images/ChatResource/15/p/15_p_2025_05_23_2.png",
+    "divinroleAvatarDiscoverShowVideo": "assets/images/ChatResource/15/v/15_v_2025_05_23_1.mp4",
+    "divinroleAvatarArrayImg": [
+      "assets/images/ChatResource/15/p/15_p_2025_05_23_1.png",
+      "assets/images/ChatResource/15/p/15_p_2025_05_23_2.png",
+      "assets/images/ChatResource/15/p/15_p_2025_05_23_3.png"
+    ],
+    "divinroleAvatarSayHi": "Hello! The ocean always helps me find peace. I'd love to hear what draws you to the water. Shall we dive in together?",
+    "divinroleIntroduction": "Madison is empathetic and insightful, finding deep meaning in her connection with the sea. She enjoys quiet dives where she can reflect and recharge. Her thoughtful nature brings comfort to those around her."
+  }
+] 
