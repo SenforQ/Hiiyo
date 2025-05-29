@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
+import 'vip_page.dart';
 
 class EditProfilePage extends StatefulWidget {
   final String avatar;
@@ -32,10 +33,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
     _avatar = widget.avatar;
     _nicknameController = TextEditingController(text: widget.nickname);
     _signatureController = TextEditingController(
-      text:
-          widget.signature == 'No personal signature yet.'
-              ? ''
-              : widget.signature,
+      text: widget.signature == 'No personal signature yet.'
+          ? ''
+          : widget.signature,
     );
   }
 
@@ -205,7 +205,39 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 14),
                 ),
-                onPressed: _saveProfile,
+                onPressed: () async {
+                  final prefs = await SharedPreferences.getInstance();
+                  final isVip = prefs.getBool('is_vip') ?? false;
+                  final vipExpire = prefs.getInt('vip_expire_time') ?? 0;
+                  final now = DateTime.now().millisecondsSinceEpoch;
+                  if (!isVip || vipExpire <= now) {
+                    final goVip = await showDialog<bool>(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: const Text('VIP Required'),
+                        content: const Text(
+                            'Editing and saving your profile requires VIP.'),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.of(context).pop(false),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.of(context).pop(true),
+                            child: const Text('Go'),
+                          ),
+                        ],
+                      ),
+                    );
+                    if (goVip == true) {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const VipPage()));
+                    }
+                    return;
+                  }
+                  // VIP用户才允许保存
+                  await _saveProfile();
+                },
                 child: const Text(
                   'Save',
                   style: TextStyle(

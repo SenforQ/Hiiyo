@@ -5,6 +5,8 @@ import 'report_page.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import 'package:video_player/video_player.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'wallet_page.dart';
 
 // 朋友圈动态数据结构
 class FriendMoment {
@@ -189,12 +191,11 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   // Picture Notes 区域
                   Expanded(
                     child: PictureNotesSection(
-                      onImageTap:
-                          (img) => setState(() => _fullScreenImage = img),
-                      onVideoTap:
-                          (url, cover) => setState(
-                            () => _fullScreenVideo = _FullScreenVideoData(url),
-                          ),
+                      onImageTap: (img) =>
+                          setState(() => _fullScreenImage = img),
+                      onVideoTap: (url, cover) => setState(
+                        () => _fullScreenVideo = _FullScreenVideoData(url),
+                      ),
                     ),
                   ),
                 ],
@@ -607,8 +608,7 @@ class _DanmakuListState extends State<DanmakuList> {
     final controller = row == 1 ? _scrollController1 : _scrollController2;
     final list = row == 1 ? _danmakuList1 : _danmakuList2;
     final isLoading = row == 1 ? _isLoadingMore1 : _isLoadingMore2;
-    final percent =
-        controller.position.pixels /
+    final percent = controller.position.pixels /
         (controller.position.maxScrollExtent == 0
             ? 1
             : controller.position.maxScrollExtent);
@@ -633,16 +633,16 @@ class _DanmakuListState extends State<DanmakuList> {
         final double maxScrollExtent = controller.position.maxScrollExtent;
         controller
             .animateTo(
-              maxScrollExtent,
-              duration: Duration(seconds: (maxScrollExtent ~/ 45)),
-              curve: Curves.linear,
-            )
+          maxScrollExtent,
+          duration: Duration(seconds: (maxScrollExtent ~/ 45)),
+          curve: Curves.linear,
+        )
             .then((_) {
-              if (mounted) {
-                controller.jumpTo(0);
-                _startScrolling(controller);
-              }
-            });
+          if (mounted) {
+            controller.jumpTo(0);
+            _startScrolling(controller);
+          }
+        });
       }
     });
   }
@@ -709,10 +709,9 @@ class DanmakuBubble extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 8),
         padding: const EdgeInsets.only(left: 2, top: 4, bottom: 4, right: 4),
         decoration: BoxDecoration(
-          color:
-              isBlue
-                  ? const Color(0xFFB6E0FF).withOpacity(0.85)
-                  : const Color(0xFFD1C6FF).withOpacity(0.85),
+          color: isBlue
+              ? const Color(0xFFB6E0FF).withOpacity(0.85)
+              : const Color(0xFFD1C6FF).withOpacity(0.85),
           borderRadius: BorderRadius.circular(24),
         ),
         child: Row(
@@ -754,7 +753,7 @@ class PictureNotesSection extends StatefulWidget {
   final void Function(String imagePath)? onImageTap;
   final void Function(String videoUrl, String cover)? onVideoTap;
   const PictureNotesSection({Key? key, this.onImageTap, this.onVideoTap})
-    : super(key: key);
+      : super(key: key);
 
   @override
   State<PictureNotesSection> createState() => _PictureNotesSectionState();
@@ -908,10 +907,9 @@ class _PictureNotesSectionState extends State<PictureNotesSection> {
       return const Center(child: CircularProgressIndicator());
     }
     // 过滤拉黑用户
-    final visibleMoments =
-        _moments
-            .where((m) => !BlockedUsers.blockedUserIds.contains(m.userId))
-            .toList();
+    final visibleMoments = _moments
+        .where((m) => !BlockedUsers.blockedUserIds.contains(m.userId))
+        .toList();
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 24),
       children: [
@@ -1078,15 +1076,14 @@ class _PictureNotesSectionState extends State<PictureNotesSection> {
                                     top: Radius.circular(20),
                                   ),
                                 ),
-                                builder:
-                                    (context) => CommentSheet(
-                                      moment: moment,
-                                      onAddComment: (comment) {
-                                        setState(() {
-                                          moment.comments.insert(0, comment);
-                                        });
-                                      },
-                                    ),
+                                builder: (context) => CommentSheet(
+                                  moment: moment,
+                                  onAddComment: (comment) {
+                                    setState(() {
+                                      moment.comments.insert(0, comment);
+                                    });
+                                  },
+                                ),
                               );
                             },
                             child: Row(
@@ -1114,8 +1111,8 @@ class _PictureNotesSectionState extends State<PictureNotesSection> {
                               setState(() {
                                 if (moment.isLiked) {
                                   moment.isLiked = false;
-                                  moment.likeCount = (moment.likeCount - 1)
-                                      .clamp(0, 99999);
+                                  moment.likeCount =
+                                      (moment.likeCount - 1).clamp(0, 99999);
                                 } else {
                                   moment.isLiked = true;
                                   moment.likeCount++;
@@ -1126,20 +1123,18 @@ class _PictureNotesSectionState extends State<PictureNotesSection> {
                               children: [
                                 Icon(
                                   Icons.favorite,
-                                  color:
-                                      moment.isLiked
-                                          ? Color(0xFFFF4B7B)
-                                          : Color(0xFFCCCCCC),
+                                  color: moment.isLiked
+                                      ? Color(0xFFFF4B7B)
+                                      : Color(0xFFCCCCCC),
                                   size: 24,
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
                                   moment.likeCount.toString(),
                                   style: TextStyle(
-                                    color:
-                                        moment.isLiked
-                                            ? Color(0xFFFF4B7B)
-                                            : Color(0xFF888888),
+                                    color: moment.isLiked
+                                        ? Color(0xFFFF4B7B)
+                                        : Color(0xFF888888),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15,
                                   ),
@@ -1219,19 +1214,18 @@ class _PictureNotesSectionState extends State<PictureNotesSection> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder:
-                          (context) => ReportPage(
-                            role: DivinRole(
-                              id: moment.userId,
-                              name: moment.userName,
-                              avatarHomeShowImg: moment.userAvatar,
-                              avatar: moment.userAvatar,
-                              introduction: moment.text ?? '',
-                              avatarArrayImg: moment.images,
-                              avatarSayHi: '',
-                              avatarDiscoverShowVideo: moment.videoUrl ?? '',
-                            ),
-                          ),
+                      builder: (context) => ReportPage(
+                        role: DivinRole(
+                          id: moment.userId,
+                          name: moment.userName,
+                          avatarHomeShowImg: moment.userAvatar,
+                          avatar: moment.userAvatar,
+                          introduction: moment.text ?? '',
+                          avatarArrayImg: moment.images,
+                          avatarSayHi: '',
+                          avatarDiscoverShowVideo: moment.videoUrl ?? '',
+                        ),
+                      ),
                     ),
                   );
                 },
@@ -1321,7 +1315,7 @@ class _FollowButton extends StatelessWidget {
   final bool isFollowed;
   final VoidCallback onTap;
   const _FollowButton({required this.isFollowed, required this.onTap, Key? key})
-    : super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -1334,10 +1328,9 @@ class _FollowButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
-            colors:
-                isFollowed
-                    ? [Color(0xFFFF7E80), Color(0xFFFF3337)]
-                    : [Color(0xFF6066F3), Color(0xFF9A49E2)],
+            colors: isFollowed
+                ? [Color(0xFFFF7E80), Color(0xFFFF3337)]
+                : [Color(0xFF6066F3), Color(0xFF9A49E2)],
             begin: Alignment(-1, 0.5),
             end: Alignment(1, 0.5),
           ),
@@ -1531,121 +1524,118 @@ class _CommentSheetState extends State<CommentSheet> {
             ),
             const Divider(height: 1),
             Expanded(
-              child:
-                  comments?.isEmpty == true
-                      ? const Center(
-                        child: Text(
-                          'No comments yet.',
-                          style: TextStyle(color: Color(0xFF888888)),
-                        ),
-                      )
-                      : ListView.builder(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        itemCount: comments!.length,
-                        itemBuilder: (context, idx) {
-                          final c = comments![idx];
-                          return ListTile(
-                            leading: CircleAvatar(
-                              backgroundImage: AssetImage(c.userAvatar),
-                              radius: 18,
-                            ),
-                            title: Text(
-                              c.userName,
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                              ),
-                            ),
-                            trailing: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                // 点赞按钮
-                                GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      if (c.isLiked) {
-                                        c.isLiked = false;
-                                        c.likeCount = (c.likeCount - 1).clamp(
-                                          0,
-                                          99999,
-                                        );
-                                      } else {
-                                        c.isLiked = true;
-                                        c.likeCount++;
-                                      }
-                                    });
-                                  },
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite,
-                                        color:
-                                            c.isLiked
-                                                ? Color(0xFFFF4B7B)
-                                                : Color(0xFFCCCCCC),
-                                        size: 20,
-                                      ),
-                                      const SizedBox(width: 2),
-                                      Text(
-                                        c.likeCount.toString(),
-                                        style: TextStyle(
-                                          color:
-                                              c.isLiked
-                                                  ? Color(0xFFFF4B7B)
-                                                  : Color(0xFF888888),
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 13,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(width: 12),
-                                // 更多按钮
-                                GestureDetector(
-                                  onTap: () async {
-                                    await _showCommentActionSheet(
-                                      context,
-                                      c,
-                                      idx,
-                                    );
-                                  },
-                                  child: const Icon(
-                                    Icons.more_horiz,
-                                    color: Color(0xFFCCCCCC),
-                                    size: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            contentPadding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 2,
-                            ),
-                            // 时间显示在副标题下方
-                            isThreeLine: true,
-                            dense: true,
-                            // 在副标题下方加时间
-                            subtitle: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  c.content,
-                                  style: const TextStyle(fontSize: 15),
-                                ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  _formatCommentTime(c.time),
-                                  style: const TextStyle(
-                                    fontSize: 12,
-                                    color: Color(0xFFAAAAAA),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          );
-                        },
+              child: comments?.isEmpty == true
+                  ? const Center(
+                      child: Text(
+                        'No comments yet.',
+                        style: TextStyle(color: Color(0xFF888888)),
                       ),
+                    )
+                  : ListView.builder(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      itemCount: comments!.length,
+                      itemBuilder: (context, idx) {
+                        final c = comments![idx];
+                        return ListTile(
+                          leading: CircleAvatar(
+                            backgroundImage: AssetImage(c.userAvatar),
+                            radius: 18,
+                          ),
+                          title: Text(
+                            c.userName,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              // 点赞按钮
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    if (c.isLiked) {
+                                      c.isLiked = false;
+                                      c.likeCount = (c.likeCount - 1).clamp(
+                                        0,
+                                        99999,
+                                      );
+                                    } else {
+                                      c.isLiked = true;
+                                      c.likeCount++;
+                                    }
+                                  });
+                                },
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.favorite,
+                                      color: c.isLiked
+                                          ? Color(0xFFFF4B7B)
+                                          : Color(0xFFCCCCCC),
+                                      size: 20,
+                                    ),
+                                    const SizedBox(width: 2),
+                                    Text(
+                                      c.likeCount.toString(),
+                                      style: TextStyle(
+                                        color: c.isLiked
+                                            ? Color(0xFFFF4B7B)
+                                            : Color(0xFF888888),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              // 更多按钮
+                              GestureDetector(
+                                onTap: () async {
+                                  await _showCommentActionSheet(
+                                    context,
+                                    c,
+                                    idx,
+                                  );
+                                },
+                                child: const Icon(
+                                  Icons.more_horiz,
+                                  color: Color(0xFFCCCCCC),
+                                  size: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 2,
+                          ),
+                          // 时间显示在副标题下方
+                          isThreeLine: true,
+                          dense: true,
+                          // 在副标题下方加时间
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                c.content,
+                                style: const TextStyle(fontSize: 15),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                _formatCommentTime(c.time),
+                                style: const TextStyle(
+                                  fontSize: 12,
+                                  color: Color(0xFFAAAAAA),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
             ),
             const Divider(height: 1),
             Padding(
@@ -1675,32 +1665,69 @@ class _CommentSheetState extends State<CommentSheet> {
                   const SizedBox(width: 8),
                   _sending
                       ? const SizedBox(
-                        width: 32,
-                        height: 32,
-                        child: CircularProgressIndicator(strokeWidth: 2),
-                      )
+                          width: 32,
+                          height: 32,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
                       : IconButton(
-                        icon: const Icon(Icons.send, color: Color(0xFF6066F3)),
-                        onPressed: () async {
-                          final text = _controller.text.trim();
-                          if (text.isEmpty) return;
-                          setState(() => _sending = true);
-                          await Future.delayed(
-                            const Duration(milliseconds: 300),
-                          );
-                          widget.onAddComment(
-                            Comment(
-                              userName: 'You',
-                              userAvatar:
-                                  'assets/images/ChatResource/1/p/1_p_2025_05_23_1.png',
-                              content: text,
-                              time: DateTime.now(),
-                            ),
-                          );
-                          _controller.clear();
-                          setState(() => _sending = false);
-                        },
-                      ),
+                          icon:
+                              const Icon(Icons.send, color: Color(0xFF6066F3)),
+                          onPressed: () async {
+                            final text = _controller.text.trim();
+                            if (text.isEmpty) return;
+
+                            // 1. 检查金币余额
+                            final prefs = await SharedPreferences.getInstance();
+                            int coins = prefs.getInt('gold_coins_balance') ?? 0;
+                            if (coins < 8) {
+                              // 2. 弹窗提示
+                              final goRecharge = await showDialog<bool>(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: const Text('Insufficient Coins'),
+                                  content: const Text(
+                                      'You need at least 8 coins to comment. Would you like to recharge now?'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.of(context).pop(false),
+                                      child: const Text('Cancel'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.of(context).pop(true),
+                                      child: const Text('Recharge'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                              if (goRecharge == true) {
+                                Navigator.of(context).pop(); // 关闭评论弹窗
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (_) => const WalletPage()));
+                              }
+                              return;
+                            }
+
+                            // 3. 扣除金币并允许评论
+                            await prefs.setInt('gold_coins_balance', coins - 8);
+
+                            setState(() => _sending = true);
+                            await Future.delayed(
+                                const Duration(milliseconds: 300));
+                            widget.onAddComment(
+                              Comment(
+                                userName: 'You',
+                                userAvatar:
+                                    'assets/images/ChatResource/1/p/1_p_2025_05_23_1.png',
+                                content: text,
+                                time: DateTime.now(),
+                              ),
+                            );
+                            _controller.clear();
+                            setState(() => _sending = false);
+                          },
+                        ),
                 ],
               ),
             ),
@@ -1744,21 +1771,20 @@ class _CommentSheetState extends State<CommentSheet> {
                   // 可跳转举报页或弹窗
                   showDialog(
                     context: context,
-                    builder:
-                        (context) => AlertDialog(
-                          title: const Text('Report'),
-                          content: const Text('Report this comment?'),
-                          actions: [
-                            TextButton(
-                              onPressed: () => Navigator.of(context).pop(),
-                              child: const Text('Cancel'),
-                            ),
-                            TextButton(
-                              onPressed: () => Navigator.of(context).pop(),
-                              child: const Text('OK'),
-                            ),
-                          ],
+                    builder: (context) => AlertDialog(
+                      title: const Text('Report'),
+                      content: const Text('Report this comment?'),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: const Text('Cancel'),
                         ),
+                        TextButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: const Text('OK'),
+                        ),
+                      ],
+                    ),
                   );
                 },
                 child: Container(
@@ -1781,21 +1807,20 @@ class _CommentSheetState extends State<CommentSheet> {
                   // Block: 可扩展为拉黑该用户
                   showDialog(
                     context: context,
-                    builder:
-                        (context) => AlertDialog(
-                          title: const Text('Block'),
-                          content: Text('Block user ${comment.userName}?'),
-                          actions: [
-                            TextButton(
-                              onPressed: () => Navigator.of(context).pop(),
-                              child: const Text('Cancel'),
-                            ),
-                            TextButton(
-                              onPressed: () => Navigator.of(context).pop(),
-                              child: const Text('OK'),
-                            ),
-                          ],
+                    builder: (context) => AlertDialog(
+                      title: const Text('Block'),
+                      content: Text('Block user ${comment.userName}?'),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: const Text('Cancel'),
                         ),
+                        TextButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: const Text('OK'),
+                        ),
+                      ],
+                    ),
                   );
                 },
                 child: Container(
