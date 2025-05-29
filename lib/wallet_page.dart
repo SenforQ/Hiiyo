@@ -16,10 +16,10 @@ final List<GoldProduct> kGoldProducts = [
   GoldProduct(productId: 'Hiiyo2', coins: 96, priceText: '\$2.99'),
   GoldProduct(productId: 'Hiiyo5', coins: 189, priceText: '\$5.99'),
   GoldProduct(productId: 'Hiiyo9', coins: 359, priceText: '\$9.99'),
-  GoldProduct(productId: 'Hiiyo19', coins: 729, priceText: '\$1.99'),
+  GoldProduct(productId: 'Hiiyo19', coins: 729, priceText: '\$19.99'),
   GoldProduct(productId: 'Hiiyo49', coins: 1869, priceText: '\$49.99'),
   GoldProduct(productId: 'Hiiyo99', coins: 3799, priceText: '\$99.99'),
-  GoldProduct(productId: 'Hiiyo159', coins: 5999, priceText: '\$9.99'),
+  GoldProduct(productId: 'Hiiyo159', coins: 5999, priceText: '\$159.99'),
   GoldProduct(productId: 'Hiiyo239', coins: 9059, priceText: '\$239.99'),
 ];
 
